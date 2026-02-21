@@ -58,6 +58,7 @@ export function startWatcher(): void {
     usePolling,
     ...(usePolling && { interval: 100 }),
     depth: 2,
+    followSymlinks: true,
   });
 
   watcher.on("change", handleChange);
